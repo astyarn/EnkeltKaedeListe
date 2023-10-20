@@ -147,6 +147,10 @@ namespace EnkeltKædeListe
 
         public int GetFirst()
         {
+            if (First == null)
+            {
+                return -1;
+            }
             return First.Data;
         }
         public int GetElement(int index)
