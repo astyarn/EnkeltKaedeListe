@@ -14,6 +14,14 @@ namespace EnkeltKædeListeUnitTest
         }
 
         [Fact]
+        public void NoElementWhenGetFirstFromList()
+        {
+            KædeListe test1 = new KædeListe();
+
+            Assert.Equal(-1, test1.GetFirst());
+        }
+
+        [Fact]
         public void FirstElementInList()
         {
             KædeListe list = new KædeListe();
