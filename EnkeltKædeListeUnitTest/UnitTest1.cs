@@ -95,8 +95,6 @@ namespace EnkeltKædeListeUnitTest
             list.Add(7);
             list.Sort();
             Assert.Equal(5, list.GetFirst());
-            //Assert.Equal(6, list.GetElement(2));
-            //Assert.Equal(7, list.GetElement(3));
         }
 
         [Fact]
@@ -108,8 +106,20 @@ namespace EnkeltKædeListeUnitTest
             list.Add(3);
             list.Sort();
             Assert.Equal(1, list.GetFirst());
-            //Assert.Equal(6, list.GetElement(2));
-            //Assert.Equal(7, list.GetElement(3));
+        }
+
+        [Fact]
+        public void SortElementsInList3()
+        {
+            KædeListe list = new KædeListe();
+            list.Add(1);
+            list.Add(2);
+            list.Add(3);
+            list.Add(9);
+            list.Add(12);
+            list.Add(27);
+            list.Sort();
+            Assert.Equal(12, list.GetElement(5));
         }
 
         [Fact]
