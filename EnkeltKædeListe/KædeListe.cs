@@ -9,7 +9,7 @@ namespace EnkeltKædeListe
 {
     public class KædeListe
     {
-        public Element First { get; set; }
+        public Element? First { get; set; }
 
         public KædeListe()
         {
