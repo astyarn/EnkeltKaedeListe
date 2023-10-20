@@ -99,7 +99,7 @@ namespace EnkeltKædeListe
                     for (int i = 1; i < n; i++)
                     {
                         //Check if a previous element exists
-                        Element N;
+                        Element? N;
                         if ((i - 1) <= 0)
                         {
                             N = null;
