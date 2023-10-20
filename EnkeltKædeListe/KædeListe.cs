@@ -159,7 +159,7 @@ namespace EnkeltKædeListe
             {
                 bool keepRunning = true;
                 int count = 0;
-                Element Check = First;
+                Element? Check = First;
                 do
                 {
                     count++;
@@ -183,7 +183,7 @@ namespace EnkeltKædeListe
             {
                 bool keepRunning = true;
                 int count = 0;
-                Element Check = First;
+                Element? Check = First;
                 do
                 {
                     count++;
