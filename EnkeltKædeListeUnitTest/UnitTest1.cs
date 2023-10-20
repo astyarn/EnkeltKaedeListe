@@ -80,7 +80,10 @@ namespace EnkeltKædeListeUnitTest
             list.Add(5);
             list.Add(7);
             list.Add(8);
-            Assert.Equal(6, list.GetElement(4));
+            list.Add(9);
+            list.Add(22);
+            list.Add(11);
+            Assert.Equal(8, list.GetElement(4));
         }
 
         [Fact]

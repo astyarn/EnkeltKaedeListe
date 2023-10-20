@@ -88,41 +88,58 @@ namespace EnkeltKædeListe
         public void Sort()
         {
             int n = this.Count();
-            if (n > 1)
-            {
-                bool swapped;
+            bool Swapped;
 
-                Element CurrentCheck;
-                Element PrevCheck;
+            if (n > 1) 
+            {
                 do
                 {
-                    swapped = false;
-                    for (int i = 2; i < n+1; i++)
+                    Swapped = false;
+                    for (int i = 1; i < n; i++)
                     {
-                        CurrentCheck = this.GetElementObj(n);
-                        PrevCheck = this.GetElementObj(n-1);
-
-                        if (PrevCheck.Data > CurrentCheck.Data)
+                        Element N;
+                        if ((i - 1) <= 0)
                         {
-                            // Swap the elements
-                            Element NextElement;
-                            if (CurrentCheck.NextElement == null)
+                            N = null;
+                        }
+                        else
+                        {
+                            N = GetElementObj(i - 1);
+                        }
+                    
+                        Element a = GetElementObj(i);
+                        Element b = GetElementObj(i+1);
+
+                        if (a.Data > b.Data)
+                        {
+                            Element tempC;
+                            if (b.NextElement != null)
                             {
-                                NextElement = null;
+                                tempC = b.NextElement;
                             }
                             else
                             {
-                                NextElement = CurrentCheck.NextElement;
+                                tempC = null;
+                            }
+                            b.NextElement = a;
+                            a.NextElement = tempC;
+
+                            //Check if one of the elements was the first and set it as first
+                            if (i == 1)
+                            {
+                                this.First = b;
                             }
 
-                            CurrentCheck.NextElement = PrevCheck;
-
-                            PrevCheck.NextElement = NextElement;
-
-                            swapped = true;
+                            //If there was an element before the first one swapped change the pointer of it
+                            if (N != null)
+                            {
+                                N.NextElement = b;
+                            }
+                            Swapped = true;
                         }
+                    
                     }
-                } while (swapped);
+                } while (Swapped);
             }
         }
 
