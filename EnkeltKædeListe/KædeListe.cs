@@ -9,11 +9,11 @@ namespace EnkeltKædeListe
 {
     public class KædeListe
     {
-        public Element First { get; set; } = null;
+        public Element First { get; set; }
 
         public KædeListe()
         {
-            
+            First = null;
         }
 
         public void Add(int iData)
