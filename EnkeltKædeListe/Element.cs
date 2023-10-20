@@ -9,9 +9,9 @@ namespace EnkeltKædeListe
     public class Element
     {
         public int Data { get; set; }
-        public Element NextElement { get; set; }
+        public Element? NextElement { get; set; }
 
-        public Element(int iData, Element iNextElement)
+        public Element(int iData, Element? iNextElement)
         {
             Data = iData;
             NextElement = iNextElement;
