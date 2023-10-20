@@ -28,7 +28,7 @@ namespace EnkeltKædeListe
             {
                 bool keepRunning = true;
                 int count = 0;
-                Element CurrentCheck = First;
+                Element? CurrentCheck = First;
                 Element? PrevCheck = null;
                 do
                 {
