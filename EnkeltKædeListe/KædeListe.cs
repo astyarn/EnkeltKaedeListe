@@ -114,7 +114,7 @@ namespace EnkeltKædeListe
 
                         if (a.Data > b.Data)
                         {
-                            Element tempC;
+                            Element? tempC;
                             if (b.NextElement != null)
                             {
                                 tempC = b.NextElement;
