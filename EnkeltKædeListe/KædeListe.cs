@@ -98,6 +98,7 @@ namespace EnkeltKædeListe
                     Swapped = false;
                     for (int i = 1; i < n; i++)
                     {
+                        //Check if a previous element exists
                         Element N;
                         if ((i - 1) <= 0)
                         {
@@ -125,13 +126,13 @@ namespace EnkeltKædeListe
                             b.NextElement = a;
                             a.NextElement = tempC;
 
-                            //Check if one of the elements was the first and set it as first
+                            //Check if one of the swapped elements is now the first and set it as first
                             if (i == 1)
                             {
                                 this.First = b;
                             }
 
-                            //If there was an element before the first one swapped change the pointer of it
+                            //If there was an element before current compred one swapped change the pointer of it
                             if (N != null)
                             {
                                 N.NextElement = b;
