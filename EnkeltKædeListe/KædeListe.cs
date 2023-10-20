@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -193,6 +194,25 @@ namespace EnkeltKædeListe
                 } while (keepRunning);
             }
             return null;
+        }
+
+        public string Print()
+        {
+            string print = string.Empty;
+
+            int n = this.Count();
+
+            for (int i = 1; i < n+1; i++ )
+            {
+                Element t = this.GetElementObj(i);
+                print += Convert.ToString(t.Data);
+                if (t.NextElement != null)
+                {
+                    print += ",";
+                }  
+            }
+
+            return print;
         }
     }
 }

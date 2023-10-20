@@ -111,5 +111,16 @@ namespace EnkeltKædeListeUnitTest
             //Assert.Equal(6, list.GetElement(2));
             //Assert.Equal(7, list.GetElement(3));
         }
+
+        [Fact]
+        public void TestPrint()
+        {
+            KædeListe list = new KædeListe();
+            list.Add(1);
+            list.Add(2);
+            list.Add(3);
+            string test = list.Print();
+            Assert.Equal("3,2,1", test);
+        }
     }
 }
