@@ -61,6 +61,19 @@ namespace EnkeltKædeListeUnitTest
             list.Remove(1);
             Assert.Equal(7, list.GetFirst());
         }
+        [Fact]
+        public void Remove3rdElementInList()
+        {
+            KædeListe list = new KædeListe();
+            list.Add(7);
+            list.Add(6);
+            list.Add(5);    //<-- Removing this element
+            list.Add(4);
+            list.Add(12);
+            list.Remove(3);
+            Assert.Equal(6, list.GetElement(3));
+        }
+
 
         [Fact]
         public void GetAnElementInList()
